@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { CheckCircle2, Circle, ExternalLink, Code2, BookOpen, Trophy, Target } from 'lucide-react';
+import { CheckCircle2, Circle, ExternalLink, BookOpen, Trophy, Target } from 'lucide-react';
+import Check from '/check.svg';
 import { categories } from './data';
 import './App.css';
 type Problem = {
@@ -57,7 +58,7 @@ function App() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Code2 className="w-8 h-8 text-purple-400" />
+            <img src={Check} alt="App Logo" className="w-10 h-10" />
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               DSA Practice Checklist
             </h1>
