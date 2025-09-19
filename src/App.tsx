@@ -134,8 +134,8 @@ function App() {
   const difficultiesOrder: (keyof Difficulties)[] = ['easy', 'medium', 'hard'];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-8 max-w-6xl">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 w-full">
+      <div className="container sm:mx-auto px-4 py-8  w-full">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -193,12 +193,12 @@ function App() {
                 {/* Category Header */}
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h2 className="text-2xl font-bold text-white mb-1">{category.name}</h2>
-                    <p className="text-slate-300">{categoryStats.total} problems</p>
+                    <h2 className="sm:text-2xl text-xl font-bold text-white mb-1">{category.name}</h2>
+                    <p className="sm:text-sm text-xs text-slate-300">{categoryStats.total} problems</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold text-purple-400">{categoryStats.percentage}%</div>
-                    <div className="text-sm text-slate-300">{categoryStats.completed}/{categoryStats.total}</div>
+                    <div className="sm:text-2xl text-xl font-bold text-purple-400">{categoryStats.percentage}%</div>
+                    <div className="sm:text-sm text-xs text-slate-300">{categoryStats.completed}/{categoryStats.total}</div>
                   </div>
                 </div>
 
@@ -218,10 +218,10 @@ function App() {
                   return (
                     <div key={diff} className="mb-8">
                       <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold text-white capitalize">{diff}</h3>
+                        <h3 className="sm:text-lg text-sm font-semibold text-white capitalize">{diff}</h3>
                         <div className="text-right">
-                          <div className="text-lg font-bold text-purple-400">{diffStats.percentage}%</div>
-                          <div className="text-sm text-slate-300">{diffStats.completed}/{diffStats.total}</div>
+                          <div className="sm:text-lg text-sm font-bold text-purple-400">{diffStats.percentage}%</div>
+                          <div className="sm:text-sm text-xs text-slate-300">{diffStats.completed}/{diffStats.total}</div>
                         </div>
                       </div>
                       <div className="w-full bg-slate-700 rounded-full h-1 mb-4">
@@ -236,7 +236,7 @@ function App() {
                           return (
                             <div 
                               key={index}
-                              className={`flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 ${
+                              className={`flex items-center gap-4 sm:p-4 p-2 rounded-xl border transition-all duration-200 w-full ${
                                 isCompleted 
                                   ? 'bg-green-500/20 border-green-400/50 text-green-100' 
                                   : 'bg-white/5 border-white/10 text-white hover:border-purple-400/50 hover:bg-white/10'
@@ -253,19 +253,19 @@ function App() {
                                 )}
                               </button>
                               
-                              <div className="flex-grow">
+                              <div className="flex-grow text-xs sm:text-sm">
                                 <span className={`font-medium ${isCompleted ? 'line-through text-green-200' : ''}`}>
                                   {problem.name}
                                 </span>
                               </div>
                               
-                              <div className="flex gap-2">
+                              <div className="flex sm:flex-row flex-col gap-2">
                                 {problem.lc && (
                                   <a 
                                     href={problem.lc} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-1 px-3 py-1 bg-orange-500/20 text-orange-300 rounded-lg hover:bg-orange-500/30 transition-all duration-200 text-sm font-medium"
+                                    className="flex items-center gap-1 sm:px-3 sm:py-1 py-0.5 px-1.5 bg-orange-500/20 text-orange-300 rounded-lg hover:bg-orange-500/30 transition-all duration-200 sm:text-sm text-xs font-medium"
                                   >
                                     <ExternalLink className="w-3 h-3" />
                                     LC
@@ -276,9 +276,9 @@ function App() {
                                     href={problem.gfg} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-1 px-3 py-1 bg-green-500/20 text-green-300 rounded-lg hover:bg-green-500/30 transition-all duration-200 text-sm font-medium"
+                                    className="flex items-center gap-1 sm:px-3 sm:py-1 py-0.5 px-1.5 bg-green-500/20 text-green-300 rounded-lg hover:bg-green-500/30 transition-all duration-200 sm:text-sm text-xs  font-medium"
                                   >
-                                    <ExternalLink className="w-3 h-3" />
+                                    <ExternalLink className="sm:w-3 w-2 h-2" />
                                     GFG
                                   </a>
                                 )}
@@ -287,7 +287,7 @@ function App() {
                                     href={problem.yt} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-1 px-3 py-1 bg-blue-500/20 text-blue-300 rounded-lg hover:bg-blue-500/30 transition-all duration-200 text-sm font-medium"
+                                    className="flex items-center gap-1 sm:px-3 sm:py-1 py-0.5 px-1.5 bg-blue-500/20 text-blue-300 rounded-lg hover:bg-blue-500/30 transition-all duration-200 sm:text-sm text-xs  font-medium"
                                   >
                                     <ExternalLink className="w-3 h-3" />
                                     YT

@@ -37,7 +37,7 @@ export const categories = [
           name: "Remove duplicates from sorted array",
           lc: "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
           gfg: "https://www.geeksforgeeks.org/remove-duplicates-sorted-array/",
-          yt: "https://www.youtube.com/watch?v=3OamzN90kPg",
+          yt: "https://youtu.be/xnj-GjdboGE?si=GfE--jwNBFakNbDD",
         },
         {
           name: "Move all zeros to end",
